@@ -26,6 +26,9 @@ header {
     border-bottom: 1px solid #eee; 
 
 }
+.logo {
+    text-decoration: none;
+}
 
 /* --- BARRA SUPERIOR (top-bar) --- */
 .top-bar {
