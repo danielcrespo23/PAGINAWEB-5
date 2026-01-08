@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASIR</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="2.ico">
+</head>
+
+<body>
+
+<header class="cp-header">
+  <div class="top-bar">
+    <nav class="top-nav">
+      <a href="#">Sobre CP</a>
+    </nav>
+    <div class="insti-access">
+      <a href="#">Acceso a Institutos</a>
+    </div>
+  </div>
+
+  <div class="main-bar">
+    <div>
+      <a class="logo" href="index.html">CAMINOPROFESIONAL</a>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li class="dropdown">
+          <a href="#">Formación Profesional ▼</a>
+          <ul class="dropdown-content">
+           <li><a href="daw.html">DAW</a></li>
+            <li><a href="asir.html">ASIR</a></li>
+            <li><a href="dam.html">DAM</a></li>
+            <li><a href="smr.html">SMR</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Especializaciones ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="#">CIBERSEGURIDAD</a></li>
+            <li><a href="#">BIG DATA</a></li>
+            <li><a href="#">INTELIGENCIA ARTIFICIAL</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <div class="search-box">
+        <input type="text" placeholder="Buscar">
+        <span class="search-icon">🔍</span>
+      </div>
+      <button class="cta-button">Infórmate</button>
+    </div>
+  </div>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<div class="elementosprincipales">
+
+  <section class="hero">
+    <video autoplay muted loop playsinline class="video-fondo">
+      <source src="/videosPaginas/videoSmr.html.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-content">
+      <h1>SMR</h1>
+      <p>
+        SMR o Sistemas Microinformaticos y redes se centra en el hardware, las redes y el soporte técnico<br>
+        Prepárate para sectores como <strong>Ciberseguridad, Cloud y Bases de Datos</strong>.
+      </p>
+      <a href="#" class="btn-hero">Explorar especialidades</a>
+    </div>
+  </section>
+
+  <div class="contenidoGrados">
+    <h2>Administración de Sistemas Informáticos en Red (ASIR)</h2>
+    <p>
+      El titulado en SMR es instalar, configurar y mantener sistemas informáticos, ya sean equipos aislados o redes locales
+    </p>
+
+    <h3>Salidas Laborales</h3>
+    <ul>
+      <li>Operador de Sistemas</li>
+      <li>Técnico de Soporte Informatico</li>
+      <li>Comercial de Microinformatica</li>
+      <li>Tecnico en Redes de Datos</li>
+    </ul>
+  
+<h3>Asignaturas a evaluar</h3>
+
+<ul>
+  <li onclick="mostrarTexto('hardware')">Fundamentos de hardware</li>
+  <p id="hardware" class="descripcion">Aquí aprendemos cómo funciona un ordenador por dentro: piezas, cables y magia tecnológica 🔧💻</p>
+
+  <li onclick="mostrarTexto('lenguajes')">Lenguajes de marcas y sistemas de gestión de información</li>
+  <p id="lenguajes" class="descripcion">HTML, XML y más. Básicamente aprender a hablar el idioma de las webs 🌐✨</p>
+
+  <li onclick="mostrarTexto('bbdd')">Gestión de bases de datos</li>
+  <p id="bbdd" class="descripcion">Guardar datos sin que se pierdan y saber buscarlos como un pro 🗄️😎</p>
+
+  <li onclick="mostrarTexto('redes')">Planificación y administración de redes</li>
+  <p id="redes" class="descripcion">Conectar ordenadores, servidores y que el WiFi no falle 📡🔥</p>
+
+  <li onclick="mostrarTexto('sistemas')">Implantación de sistemas operativos</li>
+  <p id="sistemas" class="descripcion">Instalar, configurar y domar Windows y Linux 🐧🖥️</p>
+
+  <li onclick="mostrarTexto('ipe')">Itinerario personal para la Empreabilidad I</li>
+  <p id="ipe" class="descripcion">Pensar en tu futuro, ideas de negocio y cómo moverte en el mundo laboral 🚀</p>
+
+  <li onclick="mostrarTexto('optativo')">Módulo profesional optativo</li>
+  <p id="optativo" class="descripcion">La asignatura sorpresa que puede marcar la diferencia 🎯</p>
+</ul>
+
+<script>
+  function mostrarTexto(id) {
+    const elemento = document.getElementById(id);
+    elemento.style.display =
+      elemento.style.display === "block" ? "none" : "block";
+  }
+</script>
+  </div>
+  
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <p>Camino Profesional</p>
+      <p>Formación Profesional en Informática</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Camino Profesional</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
