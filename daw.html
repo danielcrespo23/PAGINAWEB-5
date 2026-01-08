@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASIR</title>
-
+  <title>DAW</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="2.ico">
@@ -84,38 +84,87 @@
       El titulado en DAW encargado de crear, implementar y mantener aplicaciones.
     </p>
 
-    <h3>Salidas Laborales</h3>
-    <ul>
-      <li>Desarrollador FullStack</li>
-      <li>Desarrollador BackEnd</li>
-      <li>Desarrollador FrontEnd</li>
-      <li>Especialista en E-Commerce</li>
-    </ul>
+    
   
-<h3>Asignaturas a evaluar</h3>
+<h2>1º Desarrollo de Aplicaciones Web</h2>
 
 <ul>
-  <li onclick="mostrarTexto('hardware')">Fundamentos de hardware</li>
-  <p id="hardware" class="descripcion">Aquí aprendemos cómo funciona un ordenador por dentro: piezas, cables y magia tecnológica 🔧💻</p>
+  <li onclick="mostrarTexto('programacion1')">Programación</li>
+  <p id="programacion1" class="descripcion">
+    Fundamentos de programación con Java: lógica, POO y bases del desarrollo web 🧠☕
+  </p>
 
-  <li onclick="mostrarTexto('lenguajes')">Lenguajes de marcas y sistemas de gestión de información</li>
-  <p id="lenguajes" class="descripcion">HTML, XML y más. Básicamente aprender a hablar el idioma de las webs 🌐✨</p>
+  <li onclick="mostrarTexto('lenguajes1')">Lenguajes de marcas y sistemas de gestión de información</li>
+  <p id="lenguajes1" class="descripcion">
+    HTML, CSS, XML y JSON para crear y estructurar páginas web 🌐🎨
+  </p>
 
-  <li onclick="mostrarTexto('bbdd')">Gestión de bases de datos</li>
-  <p id="bbdd" class="descripcion">Guardar datos sin que se pierdan y saber buscarlos como un pro 🗄️😎</p>
+  <li onclick="mostrarTexto('bbdd1')">Bases de datos</li>
+  <p id="bbdd1" class="descripcion">
+    Diseño de bases de datos y consultas SQL para aplicaciones web 🗄️📊
+  </p>
 
-  <li onclick="mostrarTexto('redes')">Planificación y administración de redes</li>
-  <p id="redes" class="descripcion">Conectar ordenadores, servidores y que el WiFi no falle 📡🔥</p>
+  <li onclick="mostrarTexto('sistemas1')">Sistemas informáticos</li>
+  <p id="sistemas1" class="descripcion">
+    Hardware, sistemas operativos y nociones básicas de redes 🖥️⚙️
+  </p>
 
-  <li onclick="mostrarTexto('sistemas')">Implantación de sistemas operativos</li>
-  <p id="sistemas" class="descripcion">Instalar, configurar y domar Windows y Linux 🐧🖥️</p>
+  <li onclick="mostrarTexto('entornos1')">Entornos de desarrollo</li>
+  <p id="entornos1" class="descripcion">
+    Uso de IDEs, Git y trabajo colaborativo en proyectos web 🧑‍💻🔧
+  </p>
 
-  <li onclick="mostrarTexto('ipe')">Itinerario personal para la Empreabilidad I</li>
-  <p id="ipe" class="descripcion">Pensar en tu futuro, ideas de negocio y cómo moverte en el mundo laboral 🚀</p>
+  <li onclick="mostrarTexto('ipe1')">Itinerario personal para la Empleabilidad I</li>
+  <p id="ipe1" class="descripcion">
+    Orientación laboral y habilidades profesionales 🚀💼
+  </p>
 
-  <li onclick="mostrarTexto('optativo')">Módulo profesional optativo</li>
-  <p id="optativo" class="descripcion">La asignatura sorpresa que puede marcar la diferencia 🎯</p>
+  <li onclick="mostrarTexto('optativo1')">Módulo profesional optativo</li>
+  <p id="optativo1" class="descripcion">
+    Asignatura adicional para ampliar conocimientos web 🎯
+  </p>
 </ul>
+<br>
+<h2>2º Desarrollo de Aplicaciones Web</h2>
+
+<ul>
+  <li onclick="mostrarTexto('cliente2')">Desarrollo web en entorno cliente</li>
+  <p id="cliente2" class="descripcion">
+    Programación en JavaScript para crear webs dinámicas e interactivas ⚡🧩
+  </p>
+
+  <li onclick="mostrarTexto('servidor2')">Desarrollo web en entorno servidor</li>
+  <p id="servidor2" class="descripcion">
+    Desarrollo de aplicaciones web con PHP, Java o frameworks backend 🖥️🔙
+  </p>
+
+  <li onclick="mostrarTexto('interfaces2')">Diseño de interfaces web</li>
+  <p id="interfaces2" class="descripcion">
+    Diseño visual, usabilidad y experiencia de usuario en la web 🎨📐
+  </p>
+
+  <li onclick="mostrarTexto('despliegue2')">Despliegue de aplicaciones web</li>
+  <p id="despliegue2" class="descripcion">
+    Publicación de webs y aplicaciones en servidores reales 🌍🚀
+  </p>
+
+  <li onclick="mostrarTexto('empresa2')">Empresa e iniciativa emprendedora</li>
+  <p id="empresa2" class="descripcion">
+    Creación de empresas, ideas de negocio y mundo laboral 💡🏢
+  </p>
+
+  <li onclick="mostrarTexto('proyecto2')">Proyecto de Desarrollo de Aplicaciones Web</li>
+  <p id="proyecto2" class="descripcion">
+    Proyecto final integrando todo lo aprendido 🏆💻
+  </p>
+
+  <li onclick="mostrarTexto('fct2')">Formación en centros de trabajo (FCT)</li>
+  <p id="fct2" class="descripcion">
+    Prácticas en empresa para adquirir experiencia real 👔🏢
+  </p>
+</ul>
+
+
 
 <script>
   function mostrarTexto(id) {
@@ -124,6 +173,13 @@
       elemento.style.display === "block" ? "none" : "block";
   }
 </script>
+<h2>Salidas Laborales</h2>
+    <ul>
+      <li>Desarrollador FullStack</li>
+      <li>Desarrollador BackEnd</li>
+      <li>Desarrollador FrontEnd</li>
+      <li>Especialista en E-Commerce</li>
+    </ul>
   </div>
   
 </div>
@@ -131,13 +187,55 @@
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-logo">
-      <p>Camino Profesional</p>
-      <p>Formación Profesional en Informática</p>
+      <a>Camino Profesional</a>
+      <img src="#" alt="" class="footer-img">
+      <p>Formación Profesional en Informática — Construye tu futuro en programación, ciberseguridad e inteligencia artificial.</p>
     </div>
 
-    <div class="footer-bottom">
-      <p>© 2025 Camino Profesional</p>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Formaciones</h4>
+        <ul>
+          <li><a href="#">ASIR - Administración de Sistemas</a></li>
+          <li><a href="#">DAW - Aplicaciones Web</a></li>
+          <li><a href="#">DAM - Aplicaciones Multiplataforma</a></li>
+          <li><a href="#">SMR - Microinformática y Redes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Especialidades</h4>
+        <ul>
+          <li><a href="#">Ciberseguridad</a></li>
+          <li><a href="#">Big Data</a></li>
+          <li><a href="#">Inteligencia Artificial</a></li>
+          <li><a href="#">Diseño Gráfico</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contacto</h4>
+        <ul>
+          <li>Email: <a href="mailto:caminoprofesional@ies.com">caminoprofesional@ies.com</a></li>
+          <li>Tel: +34 623 456 789</li>
+          <li>Dirección: Tres Cantos, Madrid</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Camino Profesional · Todos los derechos reservados</p>
   </div>
 </footer>
 

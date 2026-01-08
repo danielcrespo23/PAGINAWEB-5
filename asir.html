@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="2.ico">
 </head>
 
@@ -86,37 +87,84 @@
       de sistemas operativos, redes y servicios empresariales.
     </p>
 
-    <h3>Salidas Laborales</h3>
-    <ul>
-      <li>Administrador de Sistemas</li>
-      <li>Técnico de Redes</li>
-      <li>Técnico de Ciberseguridad</li>
-      <li>Especialista en Virtualización</li>
-    </ul>
+   
   
-<h3>Asignaturas a evaluar</h3>
+<h2>1º Administración de Sistemas Informáticos en Red</h2>
 
 <ul>
-  <li onclick="mostrarTexto('hardware')">Fundamentos de hardware</li>
-  <p id="hardware" class="descripcion">Aquí aprendemos cómo funciona un ordenador por dentro: piezas, cables y magia tecnológica 🔧💻</p>
+  <li onclick="mostrarTexto('hardware1')">Fundamentos de hardware</li>
+  <p id="hardware1" class="descripcion">
+    Funcionamiento interno del ordenador: componentes, ensamblaje y mantenimiento 🔧💻
+  </p>
 
-  <li onclick="mostrarTexto('lenguajes')">Lenguajes de marcas y sistemas de gestión de información</li>
-  <p id="lenguajes" class="descripcion">HTML, XML y más. Básicamente aprender a hablar el idioma de las webs 🌐✨</p>
+  <li onclick="mostrarTexto('lenguajes1')">Lenguajes de marcas y sistemas de gestión de información</li>
+  <p id="lenguajes1" class="descripcion">
+    HTML, XML y otras tecnologías para estructurar información 🌐✨
+  </p>
 
-  <li onclick="mostrarTexto('bbdd')">Gestión de bases de datos</li>
-  <p id="bbdd" class="descripcion">Guardar datos sin que se pierdan y saber buscarlos como un pro 🗄️😎</p>
+  <li onclick="mostrarTexto('bbdd1')">Gestión de bases de datos</li>
+  <p id="bbdd1" class="descripcion">
+    Creación, administración y consulta de bases de datos 🗄️😎
+  </p>
 
-  <li onclick="mostrarTexto('redes')">Planificación y administración de redes</li>
-  <p id="redes" class="descripcion">Conectar ordenadores, servidores y que el WiFi no falle 📡🔥</p>
+  <li onclick="mostrarTexto('redes1')">Planificación y administración de redes</li>
+  <p id="redes1" class="descripcion">
+    Diseño y gestión de redes locales y corporativas 📡🔥
+  </p>
 
-  <li onclick="mostrarTexto('sistemas')">Implantación de sistemas operativos</li>
-  <p id="sistemas" class="descripcion">Instalar, configurar y domar Windows y Linux 🐧🖥️</p>
+  <li onclick="mostrarTexto('sistemas1')">Implantación de sistemas operativos</li>
+  <p id="sistemas1" class="descripcion">
+    Instalación, configuración y administración de Windows y Linux 🐧🖥️
+  </p>
 
-  <li onclick="mostrarTexto('ipe')">Itinerario personal para la Empreabilidad I</li>
-  <p id="ipe" class="descripcion">Pensar en tu futuro, ideas de negocio y cómo moverte en el mundo laboral 🚀</p>
+  <li onclick="mostrarTexto('ipe1')">Itinerario personal para la Empleabilidad I</li>
+  <p id="ipe1" class="descripcion">
+    Orientación laboral y desarrollo profesional 🚀
+  </p>
 
-  <li onclick="mostrarTexto('optativo')">Módulo profesional optativo</li>
-  <p id="optativo" class="descripcion">La asignatura sorpresa que puede marcar la diferencia 🎯</p>
+  <li onclick="mostrarTexto('optativo1')">Módulo profesional optativo</li>
+  <p id="optativo1" class="descripcion">
+    Asignatura complementaria para ampliar conocimientos 🎯
+  </p>
+</ul>
+<br>
+<h2>2º Administración de Sistemas Informáticos en Red</h2>
+
+<ul>
+  <li onclick="mostrarTexto('servicios2')">Servicios de red e Internet</li>
+  <p id="servicios2" class="descripcion">
+    Configuración de servicios como DNS, DHCP, web y correo 🌐⚙️
+  </p>
+
+  <li onclick="mostrarTexto('seguridad2')">Seguridad y alta disponibilidad</li>
+  <p id="seguridad2" class="descripcion">
+    Protección de sistemas, copias de seguridad y sistemas tolerantes a fallos 🔐🛡️
+  </p>
+
+  <li onclick="mostrarTexto('adminweb2')">Administración de sistemas gestores de bases de datos</li>
+  <p id="adminweb2" class="descripcion">
+    Administración avanzada de bases de datos en servidores 🗄️🧠
+  </p>
+
+  <li onclick="mostrarTexto('aplicaciones2')">Implantación de aplicaciones web</li>
+  <p id="aplicaciones2" class="descripcion">
+    Instalación y mantenimiento de aplicaciones web en servidores 🌍🚀
+  </p>
+
+  <li onclick="mostrarTexto('empresa2')">Empresa e iniciativa emprendedora</li>
+  <p id="empresa2" class="descripcion">
+    Creación de empresas y conocimiento del entorno laboral 💡🏢
+  </p>
+
+  <li onclick="mostrarTexto('proyecto2')">Proyecto de ASIR</li>
+  <p id="proyecto2" class="descripcion">
+    Proyecto final integrando todos los conocimientos del ciclo 🏆💻
+  </p>
+
+  <li onclick="mostrarTexto('fct2')">Formación en centros de trabajo (FCT)</li>
+  <p id="fct2" class="descripcion">
+    Prácticas en empresa para adquirir experiencia profesional 👔🏢
+  </p>
 </ul>
 
 <script>
@@ -126,6 +174,13 @@
       elemento.style.display === "block" ? "none" : "block";
   }
 </script>
+ <h2>Salidas Laborales</h2>
+    <ul>
+      <li>Administrador de Sistemas</li>
+      <li>Técnico de Redes</li>
+      <li>Técnico de Ciberseguridad</li>
+      <li>Especialista en Virtualización</li>
+    </ul>
   </div>
   
 </div>
@@ -133,13 +188,55 @@
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-logo">
-      <p>Camino Profesional</p>
-      <p>Formación Profesional en Informática</p>
+      <a>Camino Profesional</a>
+      <img src="#" alt="" class="footer-img">
+      <p>Formación Profesional en Informática — Construye tu futuro en programación, ciberseguridad e inteligencia artificial.</p>
     </div>
 
-    <div class="footer-bottom">
-      <p>© 2025 Camino Profesional</p>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Formaciones</h4>
+        <ul>
+          <li><a href="#">ASIR - Administración de Sistemas</a></li>
+          <li><a href="#">DAW - Aplicaciones Web</a></li>
+          <li><a href="#">DAM - Aplicaciones Multiplataforma</a></li>
+          <li><a href="#">SMR - Microinformática y Redes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Especialidades</h4>
+        <ul>
+          <li><a href="#">Ciberseguridad</a></li>
+          <li><a href="#">Big Data</a></li>
+          <li><a href="#">Inteligencia Artificial</a></li>
+          <li><a href="#">Diseño Gráfico</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contacto</h4>
+        <ul>
+          <li>Email: <a href="mailto:caminoprofesional@ies.com">caminoprofesional@ies.com</a></li>
+          <li>Tel: +34 623 456 789</li>
+          <li>Dirección: Tres Cantos, Madrid</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Camino Profesional · Todos los derechos reservados</p>
   </div>
 </footer>
 
