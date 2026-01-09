@@ -458,6 +458,12 @@ nav ul li {
 .formulario input[type="button"]:hover {
   background-color: #ffb733;
 }
+.formulario select{
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+
 
 /* CARRUSEL DE IMAGENES DE LAS EMPRESAS */
 
