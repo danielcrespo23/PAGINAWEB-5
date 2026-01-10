@@ -2,7 +2,7 @@
 
 $dsn = 'mysql:host=localhost;dbname=CLIENTES;charset=utf8mb4';
 $usuario = 'root';
-$pass = 'root';
+$pass = '';
 
 try {
     // Crear la instancia PDO
