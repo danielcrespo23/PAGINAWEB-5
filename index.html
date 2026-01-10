@@ -133,21 +133,23 @@
         </section>
         <section class="formulario">
           <h2>Contáctanos para más información</h2>
-          <label>Correo electrónico:</label>
-          <input type="text" placeholder="Correo Electrónico">
-          <label>Nombre:</label>
-          <input type="text" placeholder="Nombre"> 
-          <label>Apellidos:</label>
-          <input type="text" placeholder="Apellidos">
-          <label>Número de teléfono:</label>
-          <input type="number">
-          <select>
-            <option>Obtener información del siguiente grado:</option>
-            <option>DAW</option>
-            <option>DAM</option>
-            <option>ASIR</option>
-            <option>SMR</option>
-          <input type="button" value="Enviar">
+          <form action="CLIENTES/enviar_consulta.php" method="post">
+            <label>Correo electrónico:</label>
+            <input type="text" placeholder="Correo Electrónico">
+            <label>Nombre:</label>
+            <input type="text" placeholder="Nombre"> 
+            <label>Apellidos:</label>
+            <input type="text" placeholder="Apellidos">
+            <label>Número de teléfono:</label>
+            <input type="number">
+            <select>
+              <option>Obtener información del siguiente grado:</option>
+              <option>DAW</option>
+              <option>DAM</option>
+              <option>ASIR</option>
+              <option>SMR</option>
+            <input type="button" value="Enviar">
+          </form>
         </section>
       </div>
     </div>
