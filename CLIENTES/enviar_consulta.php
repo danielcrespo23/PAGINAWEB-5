@@ -3,9 +3,9 @@
 require_once 'conexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] == $_POST) {
-    $correo    = $_POST['correo'];
+    $email    = $_POST['email'];
     $nombre    = $_POST['nombre'];
-    $apellidos = $_POST['apellidos'];
+    $apellido = $_POST['apellido'];
     $telefono  = $_POST['telefono'];
-    $grado     = $_POST['grado'];
 }
+
