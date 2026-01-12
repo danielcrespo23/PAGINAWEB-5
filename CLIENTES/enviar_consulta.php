@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == $_POST) {
 }
 
 try {
-    $sql = "INSERT INTO USUARIOS (email, nombre, apellido, telefono, grados) 
+    $sql = "INSERT INTO USUARIOS (EMAIL, NOMBRE, APELLIDO, TELEFONO, grados) 
         VALUES (:email, :nombre, :apellido, :telefono, :grados)";
     $stmt = $pdo->prepare($sql);
 
