@@ -23,6 +23,9 @@ try {
         ':grados' => $grados
     ]);
 
-} catch (PDOException $e) {
+    echo "<h1>¡Solicitud enviada!</h1>";
+    echo "<p>Gracias $nombre, en breve te contactaremos para informarte sobre el grado $grados.</p>";
 
+} catch (PDOException $e) {
+    echo " Ha habido un error al procesar la consulta " . $e -> getMessage();
 }
