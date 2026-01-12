@@ -6,6 +6,7 @@ class usuarios {
     private $nombre;
     private $apellido;
     private $telefono;
+    private $grados;
 
 
     // Getter mágico para leer cualquier propiedad privada

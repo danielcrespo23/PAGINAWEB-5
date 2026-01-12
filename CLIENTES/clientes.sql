@@ -3,8 +3,9 @@ CREATE TABLE `USUARIOS` (
     `NOMBRE` VARCHAR(20) NOT NULL,
     `APELLIDO` VARCHAR(20) NOT NULL,
     `TELEFONO` VARCHAR(15) NOT NULL,
+    'grados' VARCHAR(50) NOT NULL
     PRIMARY KEY (`EMAIL`)
 );
 
-INSERT INTO `USUARIOS` (`EMAIL`, `NOMBRE`, `APELLIDO`, `TELEFONO`) VALUES ('ernestorosso11@gmail.com', 'Ernesto', 'Rosso', '631057118');
-INSERT INTO `USUARIOS` (`EMAIL`, `NOMBRE`, `APELLIDO`, `TELEFONO`) VALUES ('sebasalbertperez@gmail.com', 'Sebastian', 'Albert', '648502108');
+INSERT INTO `USUARIOS` (`EMAIL`, `NOMBRE`, `APELLIDO`, `TELEFONO`, 'grados') VALUES ('ernestorosso11@gmail.com', 'Ernesto', 'Rosso', '631057118', 'DAW');
+INSERT INTO `USUARIOS` (`EMAIL`, `NOMBRE`, `APELLIDO`, `TELEFONO`, 'grados') VALUES ('sebasalbertperez@gmail.com', 'Sebastian', 'Albert', '648502108', 'ASIR');
