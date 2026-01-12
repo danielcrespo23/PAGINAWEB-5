@@ -431,7 +431,7 @@ html {
 }
 
 .formulario input[type="text"],
-.formulario input[type="number"] {
+.formulario input[type="number"], .formulario input[type="email"] {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -444,7 +444,7 @@ html {
 }
 
 .formulario input[type="text"]:focus,
-.formulario input[type="number"]:focus {
+.formulario input[type="number"]:focus, .formulario input[type="email"]:focus {
   border-color: #f7a500;
 }
 
