@@ -9,4 +9,18 @@ if ($_SERVER['REQUEST_METHOD'] == $_POST) {
     $telefono  = $_POST['telefono'];
 }
 
+try {
+    $sql = "INSERT INTO USUARIOS (email, nombre, apellido, telefono) 
+        VALUES (:email, :nombre, :apellido, :telefono)";
+    $stmt = $pdo->prepare($sql);
 
+    $stmt->execute([
+        ':email' => $email,
+        ':nombre' => $nombre,
+        ':apellido'  => $apellido,
+        ':telefono' => $telefono
+    ]);
+
+} catch (PDOException $e) {
+
+}
