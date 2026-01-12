@@ -60,7 +60,7 @@
     <div class="elementosprincipales">
       <section class="hero">
         <video autoplay muted loop playsinline class="video-fondo">
-          <source src="/PAGINAWEB-5/videosPaginas/videoprogramando.mp4" type="video/mp4">
+          <source src="videosPaginas/videoprogramando.mp4" type="video/mp4">
           Tu navegador no soporta el video.
         </video>
         <div class="hero-content">
@@ -79,30 +79,39 @@
     <h1>Grados de informática y especialidades destacados:</h1>
   </div>
   <!-- 8 imágenes de los grados -->
-  <div class="grados-caja">
-    <div class="gradosimg">
-      <div class="grado">
-        <a href="asir.html"><img src="imagenesgrados/empleadoredes.webp" alt="ASIR">
-        <span class="grado-texto">ASIR</span></a>
-      </div>
-      <div class="grado">
-        <a href="DAW.html"></a><img src="imagenesgrados/programacion.jpg" alt="DAW">
-        <span class="grado-texto">DAW</span></a>
-      </div>
-      <div class="grado">
-        <a href="dam.html"><img src="imagenesgrados/DAM.jpeg" alt="DAM">
-        <span class="grado-texto">DAM</span></a>
-      </div>
-      <div class="grado">
-       <a href="smr.html"></a><img src="imagenesgrados/SMR.webp" alt="SMR">
-        <span class="grado-texto">SMR</span></a>
-      </div>
+<div class="grados-caja">
+  <div class="gradosimg">
+    <div class="grado">
+      <a href="asir.html">
+        <img src="imagenesgrados/empleadoredes.webp" alt="ASIR">
+        <span class="grado-texto">ASIR</span>
+      </a>
     </div>
-
+    <div class="grado">
+      <a href="daw.html">
+        <img src="imagenesgrados/programacion.jpg" alt="DAW">
+        <span class="grado-texto">DAW</span>
+      </a>
+    </div>
+    <div class="grado">
+      <a href="dam.html">
+        <img src="imagenesgrados/DAM.jpeg" alt="DAM">
+        <span class="grado-texto">DAM</span>
+      </a>
+    </div>
+    <div class="grado">
+      <a href="smr.html">
+        <img src="imagenesgrados/SMR.webp" alt="SMR">
+        <span class="grado-texto">SMR</span>
+      </a>
+    </div>
+  </div>
     <div class="gradosimg">
       <div class="grado">
+        <a href="bigdata.html">
         <img src="imagenesgrados/ANALISTAS.webp" alt="BIG DATA">
         <span class="grado-texto">BIG DATA</span>
+        </a>
       </div>
       <div class="grado">
         <img src="imagenesgrados/DISEÑO.jpg" alt="DISEÑO GRAFICO">
@@ -133,22 +142,22 @@
         </section>
         <section class="formulario">
           <h2>Contáctanos para más información</h2>
-          <form action="CLIENTES/enviar_consulta.php" method="post">
+          <form action="CLIENTES/enviar_consulta.php" method="POST">
             <label>Correo electrónico:</label>
-            <input type="text" placeholder="Correo Electrónico">
+            <input type="email" name="email" placeholder="Correo Electrónico" required>
             <label>Nombre:</label>
-            <input type="text" placeholder="Nombre"> 
-            <label>Apellidos:</label>
-            <input type="text" placeholder="Apellidos">
+            <input type="text" name="nombre" placeholder="Nombre" required> 
+            <label>Apellido:</label>
+            <input type="text" name="apellido" placeholder="Apellidos" required>
             <label>Número de teléfono:</label>
-            <input type="number">
-            <select>
-              <option>Obtener información del siguiente grado:</option>
-              <option>DAW</option>
-              <option>DAM</option>
-              <option>ASIR</option>
-              <option>SMR</option>
-            <input type="button" value="Enviar" id="botonenviar">
+            <input type="number" name="telefono">
+            <select name="grados">
+              <option value="">Obtener información del siguiente grado:</option>
+              <option value="DAW">DAW</option>
+              <option value="DAM">DAM</option>
+              <option value="ASIR">ASIR</option>
+              <option value="SMR">SMR</option>
+            <input type="submit" value="Enviar" id="botonenviar">
           </form>
         </section>
       </div>
