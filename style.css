@@ -420,9 +420,9 @@ html {
 }
 
 .formulario h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #004374;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .formulario label {
@@ -438,6 +438,9 @@ html {
   outline: none;
   width: 100%;
   transition: border 0.3s;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
 }
 
 .formulario input[type="text"]:focus,
