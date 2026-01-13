@@ -385,7 +385,7 @@ html {
   margin-bottom: 20px;
   border-bottom: 4px solid #f7a500;
   padding-bottom: 5px;
-  
+
 }
 
 .trabajos h2 {
@@ -724,7 +724,21 @@ html {
     color: #555;
 
   }
-
+  /* ESTILO ENVIAR_CONSULTA */
+  .textosencillo h1 {
+    font-size: 2rem;
+    color: #004374;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #f7a500;
+    padding-bottom: 5px;
+  }
+  .textosencillo p{
+    font-size: 2rem;
+    color: #004374;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #f7a500;
+    padding-bottom: 5px;
+  }
 /* RESPONSIVE */
 @media (min-width: 1600px) {
   .elementosprincipales .contenidoGrados {
