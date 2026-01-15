@@ -48,10 +48,13 @@
 
         <div class="actions">
             <div class="search-box">
-                <input type="text" placeholder="Buscar">
-                <span class="search-icon">🔍</span>
+                <input type="button"> Iniciar Sesion
             </div>
-            <button class="cta-button">Infórmate</button>
+            <div class="actions">
+                <button class="cta-button" onclick="location.href='#puestostrabajoyformulario'; document.getElementById('correo').focus();">
+                 Infórmate
+                </button>
+</div>
         </div>
     </div>
 </header>
@@ -144,7 +147,7 @@
           <h2>Contáctanos para más información</h2>
           <form action="CLIENTES/enviar_consulta.php" method="POST">
             <label>Correo electrónico:</label>
-            <input type="email" name="email" placeholder="Correo Electrónico" required>
+            <input id = "correo" type="email" name="email" placeholder="Correo Electrónico" required>
             <label>Nombre:</label>
             <input type="text" name="nombre" placeholder="Nombre" required> 
             <label>Apellido:</label>
