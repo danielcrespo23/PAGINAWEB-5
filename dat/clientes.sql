@@ -7,5 +7,8 @@ CREATE TABLE `USUARIOS` (
     PRIMARY KEY (`EMAIL`)
 );
 
-INSERT INTO `USUARIOS` (`EMAIL`, `NOMBRE`, `APELLIDO`, `TELEFONO`, 'grados') VALUES ('ernestorosso11@gmail.com', 'Ernesto', 'Rosso', '631057118', 'DAW');
-INSERT INTO `USUARIOS` (`EMAIL`, `NOMBRE`, `APELLIDO`, `TELEFONO`, 'grados') VALUES ('sebasalbertperez@gmail.com', 'Sebastian', 'Albert', '648502108', 'ASIR');
+INSERT INTO `USUARIOS` (`EMAIL`, `NOMBRE`, `APELLIDO`, `TELEFONO`, 'grados') 
+VALUES ('ernestorosso11@gmail.com', 'Ernesto', 'Rosso', '631057118', 'DAW');
+
+INSERT INTO `USUARIOS` (`EMAIL`, `NOMBRE`, `APELLIDO`, `TELEFONO`, 'grados')
+VALUES ('sebasalbertperez@gmail.com', 'Sebastian', 'Albert', '648502108', 'ASIR');
