@@ -1,34 +1,42 @@
 <?php
+// Usamos __DIR__ para asegurar que PHP encuentre el archivo AccesoDatos.php
+// Como enviar_consulta.php está en /app/ y AccesoDatos está en /app/dat/
+require_once __DIR__ . '/../dat/AccesoDatos.php';
+// Capturamos los datos del formulario que vienen por POST
+$email    = $_POST['email'] ?? '';
+$nombre   = $_POST['nombre'] ?? '';
+$apellido = $_POST['apellido'] ?? '';
+$telefono = $_POST['telefono'] ?? '';
+$grados   = $_POST['grados'] ?? '';
 
-require_once 'conexion.php';
-
-$mensaje = '';
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email    = $_POST['email'] ?? '';
-    $nombre   = $_POST['nombre'] ?? '';
-    $apellido = $_POST['apellido'] ?? '';
-    $telefono = $_POST['telefono'] ?? '';
-    $grados   = $_POST['grados'] ?? '';
-
+if (!empty($email) && !empty($nombre)) {
     try {
-        $sql = "INSERT INTO USUARIOS (EMAIL, NOMBRE, APELLIDO, TELEFONO, grados) 
-                VALUES (:email, :nombre, :apellido, :telefono, :grados)";
-        $stmt = $pdo->prepare($sql);
+        $db = AccesoDatos::getModelo();
+        $conn = $db->getConexion(); // Obtiene la conexión PDO
 
+        $sql = "INSERT INTO USUARIOS (EMAIL, NOMBRE, APELLIDO, TELEFONO, GRADOS, CLAVE) 
+                VALUES (:email, :nombre, :apellido, :telefono, :grados, :clave)";
+        
+        $stmt = $conn->prepare($sql);
         $stmt->execute([
-            ':email'     => $email,
-            ':nombre'    => $nombre,
-            ':apellido'  => $apellido,
-            ':telefono'  => $telefono,
-            ':grados'    => $grados
+            ':email'    => $email,
+            ':nombre'   => $nombre,
+            ':apellido' => $apellido,
+            ':telefono' => $telefono,
+            ':grados'   => $grados,
+            ':clave'    => password_hash('1234', PASSWORD_DEFAULT) // Se guarda cifrada
         ]);
 
-        $mensaje = "Gracias $nombre, en breve te contactaremos para informarte sobre el grado $grados.";
+        // Redirigir al index (subimos un nivel con ../ porque estamos en /app/)
+        header("Location: ../index.php?registro=ok");
+        exit();
 
     } catch (PDOException $e) {
-        $mensaje = "Ha habido un error al procesar la solicitud.";
+        // Si hay un error (ej: email duplicado), lo mostramos
+        die("Error al guardar los datos: " . $e->getMessage());
     }
+} else {
+    echo "Por favor, rellena los campos obligatorios.";
 }
 ?>
 <!DOCTYPE html>

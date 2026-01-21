@@ -1,26 +1,14 @@
 <?php
 
 class usuarios {
+    // Las ponemos públicas y en MAYÚSCULAS para que coincidan 
+    // exactamente con las columnas de tu base de datos
+    public $EMAIL;
+    public $NOMBRE;
+    public $APELLIDO;
+    public $TELEFONO;
+    public $GRADOS;
+    public $CLAVE;
 
-    private $email;
-    private $nombre;
-    private $apellido;
-    private $telefono;
-    private $grados;
-
-
-    // Getter mágico para leer cualquier propiedad privada
-    public function __get($atributo) {
-        if (property_exists($this, $atributo)) {
-            return $this->$atributo;
-        }
-    }
-
-    // Setter mágico para modificar cualquier propiedad privada
-    public function __set($atributo, $valor) {
-        if (property_exists($this, $atributo)) {
-            $this->$atributo = $valor;
-        }
-    }
-
+    // Ya no necesitas los métodos __get y __set para la tabla del admin
 }

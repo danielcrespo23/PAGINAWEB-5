@@ -1,3 +1,28 @@
+<?php
+session_start();
+
+// 1. IMPORTAR BASE DE DATOS
+// Ajusta la ruta si es necesario. Si index.php está en la raíz:
+include_once __DIR__ . '/dat/AccesoDatos.php';
+// 2. TIMEOUT 10 MINUTOS (Solo se aplica si hay una sesión activa)
+$inactividad = 600; 
+if (isset($_SESSION['usuario']) && isset($_SESSION['ultimo_acceso'])) {
+    $vida_session = time() - $_SESSION['ultimo_acceso'];
+    if ($vida_session > $inactividad) {
+        session_unset();
+        session_destroy();
+        header("Location: login.php?mensaje=expirado");
+        exit();
+    }
+    $_SESSION['ultimo_acceso'] = time(); // Actualizamos el acceso si está logueado
+}
+
+// 3. DETERMINAR ROL (Sin expulsar a nadie)
+// Si no hay sesión, $esAdmin será falso y $usuarioLogueado será null, permitiendo ver la web.
+$esAdmin = (isset($_SESSION['usuario']) && $_SESSION['usuario'] === 'ADMIN');
+$usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuario'] : null;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +46,7 @@
         </div>
     </div>
 
-    <div class="main-bar">
+<div class="main-bar">
         <div class="logo">CAMINOPROFESIONAL</div> 
         
         <nav class="main-nav">
@@ -43,18 +68,23 @@
                         <li><a href="ia.html">INTELIGENCIA ARTIFICIAL</a></li>
                     </ul>
                 </li>
-                </ul>
+                <li style="padding: 10px; color: #333; font-weight: bold;">
+                    Hola, <?php echo $esAdmin ? 'Administrador' : ($usuarioLogueado ? $usuarioLogueado->NOMBRE : 'Invitado'); ?>
+                </li>
+            </ul>
         </nav>
 
         <div class="actions">
             <div class="search-box">
-                <input type="button"> Iniciar Sesion
+                <?php if ($esAdmin || $usuarioLogueado): ?>
+                    <a href="app/logout.php" style="color:red;">Cerrar Sesión</a>
+                <?php else: ?>
+                    <a href="login.php" style="color:blue; font-weight:bold;">Área Privada</a>
+                <?php endif; ?>
             </div>
-            <div class="actions">
-                <button class="cta-button" onclick="location.href='#puestostrabajoyformulario'; document.getElementById('correo').focus();">
-                 Infórmate
-                </button>
-</div>
+            <button class="cta-button" onclick="location.href='#puestostrabajoyformulario';">
+                Infórmate
+            </button>
         </div>
     </div>
 </header>
@@ -76,6 +106,34 @@
           <a href="#puestostrabajoyformulario" class="btn-hero">Explorar especialidades y salidas laborales</a>
         </div>
       </section>
+<div class="contenido-dinamico" style="padding: 20px; max-width: 1200px; margin: auto;">
+    <?php if ($esAdmin): ?>
+        <h2 style="color:white;">Panel de Administración: Usuarios Registrados</h2>
+        <table border="1" style="width:100%; background: white; color: black; border-collapse: collapse;">
+            <tr style="background: #333; color: white;">
+                <th>Nombre</th><th>Email</th><th>Grado</th>
+            </tr>
+            <?php
+            $db = AccesoDatos::getModelo();
+            $lista = $db->getTodosLosUsuarios(); 
+            foreach ($lista as $u): ?>
+                <tr>
+                    <td><?php echo $u->NOMBRE; ?></td>
+                    <td><?php echo $u->EMAIL; ?></td>
+                    <td><?php echo $u->GRADOS; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    <?php elseif ($usuarioLogueado): ?>
+        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; color: white;">
+            <h2>Hola <?php echo $usuarioLogueado->NOMBRE; ?></h2>
+            <p>Gracias por registrarte. Pronto te contactaremos.</p>
+        </div>
+    <?php endif; ?>
+    
+    </div>
+      </div>
+   <section class="englobado"> ```
       <br>
    <section class="englobado">
   <div class="grados-titulo">
