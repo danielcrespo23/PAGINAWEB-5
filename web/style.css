@@ -37,7 +37,7 @@ header {
   align-items: center;
   padding: 8px 50px; 
   font-size: 0.9rem;
-  color: #444;
+  color: var(--color-primary-dark);
   background-color: white;
 }
 
@@ -178,7 +178,7 @@ header {
 
 .cta-button {
   background-color: var(--color-secondary-accent); 
-  color: white; 
+  color: var(--color-primary-dark); 
   font-weight: 700;
   padding: 12px 25px;
   border: none;
