@@ -208,7 +208,6 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
         <section class="formulario">
           <h2>Contáctanos para más información</h2>
           <form action="app/controlAcceso.php" method="POST">
-          <form action="app/controlAcceso.php" method="POST">
             <label>Correo electrónico:</label>
             <input id = "correo" type="email" name="email" placeholder="Correo Electrónico" required>
             <label>Nombre:</label>
@@ -218,6 +217,12 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
             <label>Número de teléfono:</label>
             <input type="number" name="telefono">
             <select name="grados">
+    <option value="">Obtener información del siguiente grado:</option>
+    <option value="DAW">DAW</option>
+    <option value="DAM">DAM</option>
+    <option value="ASIR">ASIR</option>
+    <option value="SMR">SMR</option>
+</select> <input type="submit" value="Enviar" id="botonenviar">
     <option value="">Obtener información del siguiente grado:</option>
     <option value="DAW">DAW</option>
     <option value="DAM">DAM</option>
