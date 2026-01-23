@@ -2,10 +2,6 @@
 // Usamos __DIR__ para asegurar que PHP encuentre el archivo AccesoDatos.php
 // Como enviar_consulta.php está en /app/ y AccesoDatos está en /app/dat/
 require_once __DIR__ . '/../dat/AccesoDatos.php';
-<<<<<<< HEAD
-
-=======
->>>>>>> bc21493aecddee63680e404af7d2d5f4d00a2a81
 // Capturamos los datos del formulario que vienen por POST
 $email    = $_POST['email'] ?? '';
 $nombre   = $_POST['nombre'] ?? '';
