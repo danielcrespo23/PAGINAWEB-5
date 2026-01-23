@@ -84,7 +84,7 @@ header {
 
 .main-nav ul li a {
   text-decoration: none;
-  color: var(--color-text-main); 
+  color: var(--color-primary-dark); 
   font-weight: 500;
   padding: 0px 0;
   display: block;
