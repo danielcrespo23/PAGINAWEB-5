@@ -208,6 +208,7 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
         <section class="formulario">
           <h2>Contáctanos para más información</h2>
           <form action="app/controlAcceso.php" method="POST">
+          <form action="app/controlAcceso.php" method="POST">
             <label>Correo electrónico:</label>
             <input id = "correo" type="email" name="email" placeholder="Correo Electrónico" required>
             <label>Nombre:</label>
