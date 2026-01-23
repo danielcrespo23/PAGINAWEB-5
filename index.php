@@ -42,7 +42,7 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
             <a href="#">Sobre CP</a>
         </nav>
         <div class="insti-access">
-            <a href="#">Acceso a Institutos</a>
+            <a href="https://gestiona.comunidad.madrid/wpad_pub/run/j/MostrarConsultaGeneral.icm">Acceso a Institutos</a>
         </div>
     </div>
 
