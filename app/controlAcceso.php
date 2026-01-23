@@ -32,12 +32,7 @@ if (!empty($email) && !empty($nombre)) {
         ]);
 
         // Redirigir al index (subimos un nivel con ../ porque estamos en /app/)
-<<<<<<< HEAD
 header("Location: ../index.php?registro=ok");        exit();
-=======
-        header("Location: ../index.php?registro=ok");
-        exit();
->>>>>>> bc21493aecddee63680e404af7d2d5f4d00a2a81
 
     } catch (PDOException $e) {
         // Si hay un error (ej: email duplicado), lo mostramos
