@@ -2,6 +2,7 @@
 // Usamos __DIR__ para asegurar que PHP encuentre el archivo AccesoDatos.php
 // Como enviar_consulta.php está en /app/ y AccesoDatos está en /app/dat/
 require_once __DIR__ . '/../dat/AccesoDatos.php';
+
 // Capturamos los datos del formulario que vienen por POST
 $email    = $_POST['email'] ?? '';
 $nombre   = $_POST['nombre'] ?? '';
@@ -28,8 +29,7 @@ if (!empty($email) && !empty($nombre)) {
         ]);
 
         // Redirigir al index (subimos un nivel con ../ porque estamos en /app/)
-        header("Location: ../index.php?registro=ok");
-        exit();
+header("Location: ../index.php?registro=ok");        exit();
 
     } catch (PDOException $e) {
         // Si hay un error (ej: email duplicado), lo mostramos
@@ -159,4 +159,3 @@ if (!empty($email) && !empty($nombre)) {
 
 </body>
 </html>
-
