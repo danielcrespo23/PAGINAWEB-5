@@ -1,10 +1,8 @@
 <<<<<<< HEAD
 <?php
-// Usamos __DIR__ para asegurar que PHP encuentre el archivo AccesoDatos.php
-// Como enviar_consulta.php está en /app/ y AccesoDatos está en /app/dat/
+
 require_once __DIR__ . '/../dat/AccesoDatos.php';
 
-// Capturamos los datos del formulario que vienen por POST
 $email    = $_POST['email'] ?? '';
 $nombre   = $_POST['nombre'] ?? '';
 $apellido = $_POST['apellido'] ?? '';
@@ -14,7 +12,7 @@ $grados   = $_POST['grados'] ?? '';
 if (!empty($email) && !empty($nombre)) {
     try {
         $db = AccesoDatos::getModelo();
-        $conn = $db->getConexion(); // Obtiene la conexión PDO
+        $conn = $db->getConexion(); 
 
         $sql = "INSERT INTO USUARIOS (EMAIL, NOMBRE, APELLIDO, TELEFONO, GRADOS, CLAVE) 
                 VALUES (:email, :nombre, :apellido, :telefono, :grados, :clave)";
@@ -26,14 +24,12 @@ if (!empty($email) && !empty($nombre)) {
             ':apellido' => $apellido,
             ':telefono' => $telefono,
             ':grados'   => $grados,
-            ':clave'    => password_hash('1234', PASSWORD_DEFAULT) // Se guarda cifrada
+            ':clave'    => password_hash('1234', PASSWORD_DEFAULT) 
         ]);
 
-        // Redirigir al index (subimos un nivel con ../ porque estamos en /app/)
 header("Location: ../index.php?registro=ok");        exit();
 
     } catch (PDOException $e) {
-        // Si hay un error (ej: email duplicado), lo mostramos
         die("Error al guardar los datos: " . $e->getMessage());
     }
 } else {
@@ -160,12 +156,9 @@ header("Location: ../index.php?registro=ok");        exit();
 
 </body>
 </html>
-=======
 <?php
-// Usamos __DIR__ para asegurar que PHP encuentre el archivo AccesoDatos.php
-// Como enviar_consulta.php está en /app/ y AccesoDatos está en /app/dat/
+
 require_once __DIR__ . '/../dat/AccesoDatos.php';
-// Capturamos los datos del formulario que vienen por POST
 $email    = $_POST['email'] ?? '';
 $nombre   = $_POST['nombre'] ?? '';
 $apellido = $_POST['apellido'] ?? '';
@@ -175,7 +168,7 @@ $grados   = $_POST['grados'] ?? '';
 if (!empty($email) && !empty($nombre)) {
     try {
         $db = AccesoDatos::getModelo();
-        $conn = $db->getConexion(); // Obtiene la conexión PDO
+        $conn = $db->getConexion(); 
 
         $sql = "INSERT INTO USUARIOS (EMAIL, NOMBRE, APELLIDO, TELEFONO, GRADOS, CLAVE) 
                 VALUES (:email, :nombre, :apellido, :telefono, :grados, :clave)";
@@ -187,14 +180,12 @@ if (!empty($email) && !empty($nombre)) {
             ':apellido' => $apellido,
             ':telefono' => $telefono,
             ':grados'   => $grados,
-            ':clave'    => password_hash('1234', PASSWORD_DEFAULT) // Se guarda cifrada
+            ':clave'    => password_hash('1234', PASSWORD_DEFAULT) 
         ]);
 
-        // Redirigir al index (subimos un nivel con ../ porque estamos en /app/)
 header("Location: ../index.php?registro=ok");        exit();
 
     } catch (PDOException $e) {
-        // Si hay un error (ej: email duplicado), lo mostramos
         die("Error al guardar los datos: " . $e->getMessage());
     }
 } else {
@@ -321,8 +312,3 @@ header("Location: ../index.php?registro=ok");        exit();
 
 </body>
 </html>
-<<<<<<< HEAD
-=======
-
->>>>>>> bc21493aecddee63680e404af7d2d5f4d00a2a81
->>>>>>> f29ecf2bdc67b94fab593454bc6829a71a675fa2

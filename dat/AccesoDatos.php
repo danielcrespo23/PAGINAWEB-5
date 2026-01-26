@@ -1,7 +1,6 @@
 <?php
-// 1. Importar la configuración y la clase de usuario
-include_once __DIR__ . '/../app/config.php'; // Sube a la raíz y entra en app
-include_once __DIR__ . '/usuarios.php';      // Está en la misma carpeta 'dat'
+include_once __DIR__ . '/../app/config.php'; 
+include_once __DIR__ . '/usuarios.php';      
 
 class AccesoDatos {
     private static $modelo = null;
@@ -16,7 +15,6 @@ class AccesoDatos {
 
     private function __construct() {
         try {
-            // Usa las constantes de app/config.php
             $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8";
             $this->dbh = new PDO($dsn, DB_USER, DB_PASS);
             $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

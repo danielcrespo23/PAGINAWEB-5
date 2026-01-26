@@ -1,10 +1,8 @@
 <?php
 session_start();
 
-// 1. IMPORTAR BASE DE DATOS
-// Ajusta la ruta si es necesario. Si index.php está en la raíz:
+
 include_once __DIR__ . '/dat/AccesoDatos.php';
-// 2. TIMEOUT 10 MINUTOS (Solo se aplica si hay una sesión activa)
 $inactividad = 600; 
 if (isset($_SESSION['usuario']) && isset($_SESSION['ultimo_acceso'])) {
     $vida_session = time() - $_SESSION['ultimo_acceso'];
@@ -14,11 +12,10 @@ if (isset($_SESSION['usuario']) && isset($_SESSION['ultimo_acceso'])) {
         header("Location: login.php?mensaje=expirado");
         exit();
     }
-    $_SESSION['ultimo_acceso'] = time(); // Actualizamos el acceso si está logueado
+    $_SESSION['ultimo_acceso'] = time();
 }
 
-// 3. DETERMINAR ROL (Sin expulsar a nadie)
-// Si no hay sesión, $esAdmin será falso y $usuarioLogueado será null, permitiendo ver la web.
+
 $esAdmin = (isset($_SESSION['usuario']) && $_SESSION['usuario'] === 'ADMIN');
 $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuario'] : null;
 
@@ -106,10 +103,16 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
           <a href="#puestostrabajoyformulario" class="btn-hero">Explorar especialidades y salidas laborales</a>
         </div>
       </section>
-<div class="contenido-dinamico" style="padding: 20px; max-width: 1200px; margin: auto;">
+<div class="contenido-dinamico" style="padding: 20px;
+       max-width: 1200px; 
+       margin: auto;">
     <?php if ($esAdmin): ?>
         <h2 style="color:white;">Panel de Administración: Usuarios Registrados</h2>
-        <table border="1" style="width:100%; background: white; color: black; border-collapse: collapse;">
+        <table border="1" 
+        style="width:100%; 
+        background: white; 
+        color: black;
+        border-collapse: collapse;">
             <tr style="background: #333; color: white;">
                 <th>Nombre</th><th>Email</th><th>Grado</th>
             </tr>
@@ -223,12 +226,7 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
     <option value="ASIR">ASIR</option>
     <option value="SMR">SMR</option>
 </select> <input type="submit" value="Enviar" id="botonenviar">
-    <option value="">Obtener información del siguiente grado:</option>
-    <option value="DAW">DAW</option>
-    <option value="DAM">DAM</option>
-    <option value="ASIR">ASIR</option>
-    <option value="SMR">SMR</option>
-</select> <input type="submit" value="Enviar" id="botonenviar">
+  
           </form>
         </section>
       </div>

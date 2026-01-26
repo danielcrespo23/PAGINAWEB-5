@@ -1,7 +1,7 @@
 <?php
 // app/config.php
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');      // Usuario por defecto de XAMPP
-define('DB_PASS', '');          // Contraseña vacía por defecto de XAMPP
-define('DB_NAME', 'usuarios');  // ¡Aquí NO pongas .sql, solo el nombre!
+define('DB_USER', 'root');     
+define('DB_PASS', '');          
+define('DB_NAME', 'usuarios'); 
 ?>
