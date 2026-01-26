@@ -226,7 +226,6 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
     <option value="ASIR">ASIR</option>
     <option value="SMR">SMR</option>
 </select> <input type="submit" value="Enviar" id="botonenviar">
-  
           </form>
         </section>
       </div>
