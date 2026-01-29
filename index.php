@@ -157,25 +157,25 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
   <div class="gradosimg">
     <div class="grado">
       <a href="asir.html">
-        <img src="web/imagenesgrados/empleadoredes.webp" alt="ASIR">
+        <img src="web/imagenesgrados/empleadoredes.webp" alt="Trabajo relacionado con ASIR">
         <span class="grado-texto">ASIR</span>
       </a>
     </div>
     <div class="grado">
       <a href="daw.html">
-        <img src="web/imagenesgrados/programacion.jpg" alt="DAW">
+        <img src="web/imagenesgrados/programacion.jpg" alt="Trabajo relacionado con DAW">
         <span class="grado-texto">DAW</span>
       </a>
     </div>
     <div class="grado">
       <a href="dam.html">
-        <img src="web/imagenesgrados/DAM.jpeg" alt="DAM">
+        <img src="web/imagenesgrados/DAM.jpeg" alt="Trabajo relacionado con DAM">
         <span class="grado-texto">DAM</span>
       </a>
     </div>
     <div class="grado">
       <a href="smr.html">
-        <img src="web/imagenesgrados/SMR.webp" alt="SMR">
+        <img src="web/imagenesgrados/SMR.webp" alt="Trabajo relacionado con SMR">
         <span class="grado-texto">SMR</span>
       </a>
     </div>
@@ -183,23 +183,23 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
     <div class="gradosimg">
       <div class="grado">
         <a href="bigdata.html">
-        <img src="web/imagenesgrados/ANALISTAS.webp" alt="BIG DATA">
+        <img src="web/imagenesgrados/ANALISTAS.webp" alt="Trabajo relacionado con BIG DATA">
         <span class="grado-texto">BIG DATA</span>
         </a>
       </div>
       <div class="grado">
-        <img src="web/imagenesgrados/DISEÑO.jpg" alt="DISEÑO GRAFICO">
+        <img src="web/imagenesgrados/DISEÑO.jpg" alt="Trabajo relacionado con DISEÑO GRAFICO">
         <span class="grado-texto">DISEÑO GRAFICO</span>
       </div>
       <div class="grado">
         <a href="ia.html">
-        <img src="web/imagenesgrados/informatico.jpg" alt="IA">
+        <img src="web/imagenesgrados/informatico.jpg" alt="Uso de Inteligencia Artificial">
         <span class="grado-texto">IA</span>
         </a>
       </div>
       <div class="grado">
         <a href="ciberseguridad.html">
-        <img src="web/imagenesgrados/CIBER.jpg" alt="CIBERSEGURIDAD">
+        <img src="web/imagenesgrados/CIBER.jpg" alt="Trabajando en Ciberseguridad">
         <span class="grado-texto">CIBERSEGURIDAD</span>
       </a>
       </div>
@@ -246,31 +246,31 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
       </div>
      <div class="carrusel" id="carrusel">
   <div class="elemento">
-    <img src="web/imagenesempresas/APPLE.webp" alt="ASIR">
+    <img src="web/imagenesempresas/APPLE.webp" alt="Empresa Apple">
     <span class="empresa-texto">APPLE</span>
   </div>
       <div class="elemento">
-        <img src="web/imagenesempresas/nvidia.jpg" alt="ASIR">
+        <img src="web/imagenesempresas/nvidia.jpg" alt="Empresa NVIDIA">
         <span class="empresa-texto">NVIDIA</span>
       </div>
       <div class="elemento">
-        <img src="web/imagenesempresas/KPMG.jpg" alt="ASIR">
+        <img src="web/imagenesempresas/KPMG.jpg" alt="Empresa KPMG">
         <span class="empresa-texto">KPMG</span>
       </div>
       <div class="elemento">
-        <img src="web/imagenesempresas/MICROSOFT.jpg" alt="ASIR">
+        <img src="web/imagenesempresas/MICROSOFT.jpg" alt="Empresa Microsoft">
         <span class="empresa-texto">MICROSOFT</span>
       </div>
       <div class="elemento">
-        <img src="web/imagenesempresas/TELEFONICA.jpg" alt="ASIR">
+        <img src="web/imagenesempresas/TELEFONICA.jpg" alt="Empresa Telefónica">
         <span class="empresa-texto">TELEFONICA</span>
       </div>
       <div class="elemento">
-        <img src="web/imagenesempresas/OPENAI.webp" alt="ASIR">
+        <img src="web/imagenesempresas/OPENAI.webp" alt="Empresa OpenAI">
         <span class="empresa-texto">OPEN AI</span>
       </div>
       <div class="elemento">
-        <img src="web/imagenesempresas/AMAZON.webp" alt="ASIR">
+        <img src="web/imagenesempresas/AMAZON.webp" alt="Empresa Amazon">
         <span class="empresa-texto">AMAZON</span>
       </div>
      </div>
