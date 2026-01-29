@@ -21,7 +21,7 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +33,16 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
 </head>
 
 <body>
+  <div id="modal-bienvenida" class="modal-overlay" role="dialog" aria-labelledby="modal-titulo" aria-modal="true">
+  <div class="modal-content">
+    <h2 id="modal-titulo">¡Bienvenido a Camino Profesional!</h2>
+    <p>¿Deseas activar la asistencia por voz para escuchar el contenido de la web?</p>
+    <div class="modal-buttons">
+      <button id="btn-si" class="cta-button">Sí, activar voz</button>
+      <button id="btn-no" class="cta-button btn-secundario">No, gracias</button>
+    </div>
+  </div>
+</div>
   <header class="cp-header">
     <div class="top-bar">
         <nav class="top-nav">
@@ -200,13 +210,13 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
         <section class="trabajos">
           <h1>Puestos de trabajo con mayor crecimiento laboral:</h1>
           <h2>Big Data y análisis de datos</h2>
-          <p>La información que las empresas tienen de sus clientes y sus procesos es, sin lugar a duda, muy valiosa para poder mejorar sus procesos y su rentabilidad. Normalmente, esta información está distribuida en diversas bases de datos o incluso de forma no estructurada, lo que dificulta el cruce de esta y la búsqueda de correlaciones entre las diferentes fuentes de datos. El analista de datos es la persona que se va a encargar de centralizar toda esa información y organizarla de forma que pueda ser explotada para aportar valor a la empresa. Cada vez más las empresas recurren a este tipo de perfiles y crean departamentos específicos de minería de datos.</p>
+          <p onclick="hablar(this.innerText)" style="cursor: pointer;" title="Haz clic para escuchar">La información que las empresas tienen de sus clientes y sus procesos es, sin lugar a duda, muy valiosa para poder mejorar sus procesos y su rentabilidad. Normalmente, esta información está distribuida en diversas bases de datos o incluso de forma no estructurada, lo que dificulta el cruce de esta y la búsqueda de correlaciones entre las diferentes fuentes de datos. El analista de datos es la persona que se va a encargar de centralizar toda esa información y organizarla de forma que pueda ser explotada para aportar valor a la empresa. Cada vez más las empresas recurren a este tipo de perfiles y crean departamentos específicos de minería de datos.</p>
           <h2>Tecnico en redes</h2>
-          <p>El técnico de microinformática y redes es aquel que se responsabiliza del correcto funcionamiento de los equipos de los usuarios y usuarias, ya sea instalando y configurando los equipos, o bien resolviendo las incidencias que puedan surgir. Pensemos en la importancia de este personal, ya que, dado que todas las empresas están informatizadas, si no hay una plantilla capaz de resolver problemas a nivel informático, la empresa puede llegar al colapso.</p>
+          <p onclick="hablar(this.innerText)" style="cursor: pointer;" title="Haz clic para escuchar">El técnico de microinformática y redes es aquel que se responsabiliza del correcto funcionamiento de los equipos de los usuarios y usuarias, ya sea instalando y configurando los equipos, o bien resolviendo las incidencias que puedan surgir. Pensemos en la importancia de este personal, ya que, dado que todas las empresas están informatizadas, si no hay una plantilla capaz de resolver problemas a nivel informático, la empresa puede llegar al colapso.</p>
           <h2>Ingeniero de Software / Desarrollador</h2>
-          <p>La rama de la programación siempre ha contado con excelentes salidas laborales. El programador es aquel profesional que desarrolla código para la ejecución de aplicaciones de diversa naturaleza que permiten el uso de equipos informáticos o tecnológicos. La programación abarca dentro de ella misma diferentes áreas de actuación, ya que cada vez el perfil del programador se especializa más. Tenemos programadores de front-end, programadores de back-end, programadores de aplicaciones móviles, programadores de aplicaciones multiplataformas… Especializarte en formaciones como el Grado Superior en Desarrollo de Aplicaciones Web o el Grado Superior en Desarrollo de Aplicaciones Multiplataforma te dotará de un perfil profesional muy atractivo, con condiciones de trabajo muy ventajosas.</p>
+          <p onclick="hablar(this.innerText)" style="cursor: pointer;" title="Haz clic para escuchar">La rama de la programación siempre ha contado con excelentes salidas laborales. El programador es aquel profesional que desarrolla código para la ejecución de aplicaciones de diversa naturaleza que permiten el uso de equipos informáticos o tecnológicos. La programación abarca dentro de ella misma diferentes áreas de actuación, ya que cada vez el perfil del programador se especializa más. Tenemos programadores de front-end, programadores de back-end, programadores de aplicaciones móviles, programadores de aplicaciones multiplataformas… Especializarte en formaciones como el Grado Superior en Desarrollo de Aplicaciones Web o el Grado Superior en Desarrollo de Aplicaciones Multiplataforma te dotará de un perfil profesional muy atractivo, con condiciones de trabajo muy ventajosas.</p>
           <h2>Tecnico ciberseguridad</h2>
-          <p>Desgraciadamente, la ciberseguridad está últimamente muy de moda por el gran volumen de ataques que día a día sufren las empresas, lo cual hace necesario que se doten de profesionales capaces de gestionar toda la seguridad de esta. Estos expertos deben ser capaces de definir planes de seguridad que garanticen la mínima exposición al riesgo sufrir un ataque cibernético. Es un perfil relativamente nuevo y hay pocos profesionales formados si lo comparamos con las necesidades que presentan las empresas en este ámbito. Sin duda es una de las especialidades de informática con más salida laboral.</p>
+          <p onclick="hablar(this.innerText)" style="cursor: pointer;" title="Haz clic para escuchar">Desgraciadamente, la ciberseguridad está últimamente muy de moda por el gran volumen de ataques que día a día sufren las empresas, lo cual hace necesario que se doten de profesionales capaces de gestionar toda la seguridad de esta. Estos expertos deben ser capaces de definir planes de seguridad que garanticen la mínima exposición al riesgo sufrir un ataque cibernético. Es un perfil relativamente nuevo y hay pocos profesionales formados si lo comparamos con las necesidades que presentan las empresas en este ámbito. Sin duda es una de las especialidades de informática con más salida laboral.</p>
         </section>
         <section class="formulario">
           <h2>Contáctanos para más información</h2>
@@ -270,15 +280,12 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
   const carrusel = document.getElementById('carrusel');
   let velocidad = 1; // pixeles por intervalo
   let direccion = 1; // 1 = derecha, -1 = izquierda
-
   function moverCarrusel() {
     // Si llega al final, cambia de dirección
     if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth) direccion = -1;
     if (carrusel.scrollLeft <= 0) direccion = 1; 
-
     carrusel.scrollLeft += velocidad * direccion;
   }
-
   setInterval(moverCarrusel, 20); // cada 20ms se mueve
 </script>
  <footer class="footer">
@@ -288,7 +295,6 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
       <img src="#" alt="" class="footer-img">
       <p>Formación Profesional en Informática — Construye tu futuro en programación, ciberseguridad e inteligencia artificial.</p>
     </div>
-
     <div class="footer-links">
       <div class="footer-column">
         <h4>Formaciones</h4>
@@ -299,7 +305,6 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
           <li><a href="smr.html">SMR - Microinformática y Redes</a></li>
         </ul>
       </div>
-
       <div class="footer-column">
         <h4>Especialidades</h4>
         <ul>
@@ -309,7 +314,6 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
           <li><a href="#">Diseño Gráfico</a></li>
         </ul>
       </div>
-
       <div class="footer-column">
         <h4>Contacto</h4>
         <ul>
@@ -330,10 +334,35 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
       </div>
     </div>
   </div>
-
   <div class="footer-bottom">
     <p>© 2025 Camino Profesional · Todos los derechos reservados</p>
   </div>
 </footer>
+<script>
+  const modal = document.getElementById('modal-bienvenida');
+  const btnSi = document.getElementById('btn-si');
+  const btnNo = document.getElementById('btn-no');
+  // Función para leer cualquier texto que le pasemos
+  function hablar(texto) {
+    // Cancelar cualquier lectura previa para que no se pisen
+    window.speechSynthesis.cancel();
+    const mensaje = new SpeechSynthesisUtterance(texto);
+    mensaje.lang = 'es-ES'; // Forzamos español de España
+    mensaje.rate = 1.0;     // Velocidad normal
+    window.speechSynthesis.speak(mensaje);
+  }
+  // Si elige SÍ
+  btnSi.onclick = function() {
+    modal.style.display = 'none'; // Cerramos el modal
+    // Saludo inicial automático
+    const bienvenida = "Asistencia activada. Tu camino profesional en la informática empieza aquí. Navega por la página para conocer nuestros grados.";
+    hablar(bienvenida);
+  };
+  // Si elige NO
+  btnNo.onclick = function() {
+    modal.style.display = 'none';
+    window.speechSynthesis.cancel(); // Aseguramos silencio
+  };
+</script>
 </body>
 </html>
