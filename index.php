@@ -278,15 +278,14 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
   </article>
   <script>
   const carrusel = document.getElementById('carrusel');
-  let velocidad = 1; // pixeles por intervalo
-  let direccion = 1; // 1 = derecha, -1 = izquierda
+  let velocidad = 1; 
+  let direccion = 1; 
   function moverCarrusel() {
-    // Si llega al final, cambia de dirección
     if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth) direccion = -1;
     if (carrusel.scrollLeft <= 0) direccion = 1; 
     carrusel.scrollLeft += velocidad * direccion;
   }
-  setInterval(moverCarrusel, 20); // cada 20ms se mueve
+  setInterval(moverCarrusel, 20); 
 </script>
  <footer class="footer">
   <div class="footer-container">
@@ -342,26 +341,21 @@ $usuarioLogueado = (isset($_SESSION['usuario']) && !$esAdmin) ? $_SESSION['usuar
   const modal = document.getElementById('modal-bienvenida');
   const btnSi = document.getElementById('btn-si');
   const btnNo = document.getElementById('btn-no');
-  // Función para leer cualquier texto que le pasemos
   function hablar(texto) {
-    // Cancelar cualquier lectura previa para que no se pisen
     window.speechSynthesis.cancel();
     const mensaje = new SpeechSynthesisUtterance(texto);
-    mensaje.lang = 'es-ES'; // Forzamos español de España
-    mensaje.rate = 1.0;     // Velocidad normal
+    mensaje.lang = 'es-ES'; 
+    mensaje.rate = 1.0;     
     window.speechSynthesis.speak(mensaje);
   }
-  // Si elige SÍ
   btnSi.onclick = function() {
-    modal.style.display = 'none'; // Cerramos el modal
-    // Saludo inicial automático
+    modal.style.display = 'none'; 
     const bienvenida = "Asistencia activada. Tu camino profesional en la informática empieza aquí. Navega por la página para conocer nuestros grados.";
     hablar(bienvenida);
   };
-  // Si elige NO
   btnNo.onclick = function() {
     modal.style.display = 'none';
-    window.speechSynthesis.cancel(); // Aseguramos silencio
+    window.speechSynthesis.cancel(); 
   };
 </script>
 </body>
